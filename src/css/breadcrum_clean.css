@@ -1,0 +1,125 @@
+/* BREADCRUMB CSS LIMPIO - SIN ANIMACIONES NI OBSERVERS */
+
+/* Contenedor principal del breadcrumb y botón volver */
+.breadcrumb-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+/* El botón volver mantiene su tamaño */
+.breadcrumb-container .btn {
+    flex-shrink: 0;
+    white-space: nowrap;
+}
+
+/* El breadcrumb puede crecer y encogerse */
+.breadcrumb-container #breadcrumb-nav {
+    flex: 1 1 auto;
+    min-width: 0;
+}
+
+/* Estilos del breadcrumb */
+#breadcrumb-nav {
+    font-size: 1.1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-top: 2em;
+}
+
+#breadcrumb-nav .breadcrumb {
+    background: none;
+    padding: 0.5rem 0 0.5rem 0;
+    margin-bottom: 0;
+}
+
+#breadcrumb-nav .breadcrumb-item+.breadcrumb-item::before {
+    content: "/ ";
+    color: #888;
+}
+
+#breadcrumb-nav .breadcrumb-item a {
+    color: #212529;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+#breadcrumb-nav .breadcrumb-item.active {
+    color: #f6a61a;
+    font-weight: 700;
+}
+
+/* Badges de ofertas */
+#breadcrumb-nav .breadcrumb-item .offer-badge {
+    color: #23272b;
+    font-weight: 600;
+    background-color: #f6a61a;
+    padding: 0 12px;
+    border-radius: 999px;
+    font-size: 1.1rem;
+    display: inline-block;
+}
+
+/* Badges de precios */
+#breadcrumb-nav .breadcrumb-item .price-badge {
+    color: #23272b;
+    font-weight: 600;
+    background-color: #f6a61a;
+    padding: 0 12px;
+    border-radius: 999px;
+    font-size: 1.1rem;
+    display: inline-block;
+}
+
+/* Etiqueta de precio */
+#breadcrumb-nav .breadcrumb-item .price-label {
+    color: #23272b;
+    font-weight: 500;
+}
+
+/* Responsive: en pantallas pequeñas, el breadcrumb salta abajo */
+@media (max-width: 768px) {
+    .breadcrumb-container {
+        flex-direction: column;
+        align-items: flex-start;
+        /* Mantener elementos alineados a la izquierda */
+        justify-content: flex-start;
+    }
+
+    /* Asegurar que el botón se mantenga alineado a la izquierda */
+    .breadcrumb-container .btn {
+        align-self: flex-start;
+        margin-left: 0;
+    }
+
+    .breadcrumb-container #breadcrumb-nav {
+        width: 100%;
+        margin-top: 0.5rem;
+        align-self: flex-start;
+    }
+}
+
+/* Breakpoint específico para 991px - solo ajustar el breadcrumb, NO el botón */
+@media (min-width: 769px) and (max-width: 1199px) {
+    .breadcrumb-container {
+        flex-direction: column;
+        align-items: flex-start;
+        /* Mantener elementos alineados a la izquierda */
+        justify-content: flex-start;
+        /* Asegurar alineación vertical al inicio */
+    }
+
+    /* Asegurar que el botón se mantenga alineado a la izquierda */
+    .breadcrumb-container .btn {
+        align-self: flex-start;
+        margin-left: 0;
+    }
+
+    .breadcrumb-container #breadcrumb-nav {
+        width: 100%;
+        margin-top: 0.5rem;
+        align-self: flex-start;
+        /* Asegurar que el breadcrumb también esté a la izquierda */
+    }
+}

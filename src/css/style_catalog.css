@@ -1,0 +1,393 @@
+/* html,
+body {
+  overflow-x: hidden;
+} */
+
+main {
+  margin-bottom: 3em;
+  /* margin-top: 5em; */
+}
+
+@media (max-width: 991px) {
+  main {
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
+@media (max-width: 770px) {
+  main {
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
+
+/* Botón circular de carrito con animación */
+.btn-cart {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #f6a61a;
+  color: #23272b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  transition: transform 0.18s, box-shadow 0.18s, background 0.18s;
+  font-size: 1.5rem;
+  /* box-shadow: 0 2px 8px rgba(246, 166, 26, 0.15); No hace nada sobre blanco, eliminada para el darkmode*/
+  position: relative;
+  overflow: visible;
+  padding: 0;
+}
+
+/* Circulito decorativo muy pegado al icono del carrito */
+
+.btn-cart .cart-plus {
+  font-size: 1.35rem;
+  color: inherit;
+  font-weight: bold;
+  position: absolute;
+  top: 0px;
+  right: 14px;
+  background: #fff0;
+  z-index: 3;
+  line-height: 1;
+  pointer-events: none;
+}
+
+.btn-cart:hover,
+.btn-cart:focus {
+  background: #ffd77a;
+  transform: scale(1.12);
+  box-shadow: 0 4px 16px rgba(246, 166, 26, 0.25);
+  outline: none;
+}
+
+.btn-cart.tilt {
+  animation: tiltCart 0.4s;
+}
+
+@keyframes tiltCart {
+  0% {
+    transform: scale(1.12) rotate(0deg);
+  }
+
+  20% {
+    transform: scale(1.18) rotate(-12deg);
+  }
+
+  40% {
+    transform: scale(1.18) rotate(12deg);
+  }
+
+  60% {
+    transform: scale(1.18) rotate(-8deg);
+  }
+
+  80% {
+    transform: scale(1.12) rotate(8deg);
+  }
+
+  100% {
+    transform: scale(1.12) rotate(0deg);
+  }
+}
+
+/* Botón ver detalle en tarjetas catálogo (igual que seguir comprando en detail-product) */
+.card .btn-detail {
+  border-radius: 999px;
+  background-color: #fff;
+  color: #23272b;
+  border: 1.5px solid #f6a61a;
+  font-weight: 300;
+  transition: background 0.2s, color 0.2s, border 0.2s;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+}
+
+.card .btn-detail:hover,
+.card .btn-detail:focus {
+  background-color: #f6a61a;
+  color: #23272b;
+  border-color: #f6a61a;
+}
+
+/* Refuerzo: nunca subrayar ni cambiar color en .catalog-secondary-nav-text, ni aunque reciba hover/focus directo */
+.catalog-secondary-nav .catalog-secondary-nav-text,
+.catalog-secondary-nav .catalog-secondary-nav-text:hover,
+.catalog-secondary-nav .catalog-secondary-nav-text:focus {
+  text-decoration: none !important;
+  border-bottom: none !important;
+  color: #f1f1f1 !important;
+  background: none !important;
+}
+
+
+body {
+  background-color: #f3f2ee;
+  font-family: "Outfit", sans-serif;
+  font-size: 1rem;
+}
+
+h2.h5 {
+  font-weight: 300;
+}
+
+h1.h1 {
+  font-weight: 600;
+}
+
+/* Botón de volver a Home */
+
+a.btn-outline-primary,
+.btn-outline-primary {
+  margin-top: 2em;
+  background-color: #23272b;
+  color: #fff;
+  border-color: #23272b;
+  font-weight: 300;
+  border-radius: 999px;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  transition: background 0.2s, color 0.2s, border 0.2s;
+}
+
+a.btn-outline-primary:hover,
+.btn-outline-primary:hover,
+a.btn-outline-primary:focus,
+.btn-outline-primary:focus {
+  background-color: #f6a61a;
+  color: #23272b;
+  border-color: #f6a61a;
+}
+
+/*filtro*/
+
+.dropdown-toggle {
+  background-color: white !important;
+  color: black !important;
+  border: 1px solid black !important;
+  border-radius: 30px;
+  font-weight: 300;
+  box-shadow: none !important;
+}
+
+.dropdown-toggle:hover {
+  background-color: rgb(116, 116, 116) !important;
+  color: white !important;
+}
+
+.dropdown-menu {
+  border-radius: 12px;
+}
+
+.dropdown-item {
+  padding: 0.5rem 1rem;
+  font-weight: 300;
+  color: black;
+}
+
+.dropdown-item:hover {
+  background-color: rgb(116, 116, 116);
+  color: white;
+}
+
+/* Tarjetas */
+
+.card {
+  border: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.card:hover {
+  /* Sin animación ni movimiento */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  transform: none;
+}
+
+/* Ajuste de tarjetas en móvil: margen lateral y ancho reducido */
+@media (max-width: 576px) {
+
+  .card {
+    max-width: 95vw;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1.2em;
+    box-sizing: border-box;
+  }
+}
+
+.card-img-top {
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  object-fit: cover;
+  height: 220px;
+  width: 100%;
+  display: block;
+  transition: transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform;
+}
+
+.card-img-top-wrapper {
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  background: #fff;
+}
+
+/* .card-content {
+   Eliminado: no se usa en la estructura actual 
+} */
+
+.card:hover .card-img-top {
+  transform: scale(1.04) rotate(-0.7deg);
+}
+
+/* Precio */
+
+.card .card-text+p {
+  font-size: 1.1rem;
+}
+
+.text-decoration-line-through {
+  color: #ae0000;
+  font-weight: 400;
+  background: none;
+  padding: 0;
+  border-radius: 0;
+  font-size: 0.95rem;
+  text-decoration: line-through;
+  display: inline;
+}
+
+/* Nuevo estilo para el precio en oferta */
+.card .price-offer {
+  color: #23272b;
+  font-weight: 600;
+  background-color: #f6a61a;
+  padding: 0 12px;
+  border-radius: 999px;
+  font-size: 1.1rem;
+  display: inline-block;
+}
+
+/* Botón "Añadir a la cesta" */
+
+.card .btn-primary {
+  margin-top: auto;
+  border-radius: 999px;
+  font-weight: 300;
+  background-color: #23272b;
+  color: #fff;
+  border-color: #23272b;
+  transition: background 0.2s, color 0.2s, border 0.2s;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+}
+
+.card .btn-primary:hover {
+  background-color: #f6a61a;
+  color: #23272b;
+  border-color: #f6a61a;
+}
+
+/* Botón ver detalle en tarjetas catálogo (igual que seguir comprando en detail-product) */
+.card .btn-detail {
+  border-radius: 999px;
+  background-color: #fff;
+  color: #23272b;
+  border: 1.5px solid #f6a61a;
+  font-weight: 400;
+  transition: background 0.2s, color 0.2s, border 0.2s;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+}
+
+.card .btn-detail:hover,
+.card .btn-detail:focus {
+  background-color: #f6a61a;
+  color: #23272b;
+  border-color: #f6a61a;
+}
+
+#cart-count {
+  display: none;
+}
+
+/* Alert personalizado para el carrito */
+.custom-alert {
+  background-color: rgba(238, 236, 231) !important;
+  /* Gris claro */
+  color: #23272b !important;
+  border: #23272b 1px solid !important;
+}
+
+.custom-alert,
+.custom-alert .bi {
+  color: #23272b !important;
+}
+
+#addToCartAlert {
+  display: none;
+  z-index: 2000;
+  min-width: 300px;
+  top: 240px !important;
+}
+
+.divisor-fade {
+  border: none;
+  border-top: 2px solid #23272bb4;
+  margin: 5em auto;
+  width: 30%;
+}
+
+#header {
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  z-index: 10;
+  position: relative;
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+
+/* Estilos personalizados para el checkbox "Solo ofertas" */
+#filtro-oferta {
+  appearance: none;
+  width: 1.25em;
+  height: 1.25em;
+  border: 2px solid #f6a61a;
+  border-radius: 0.25em;
+  background-color: transparent;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+#filtro-oferta:checked {
+  background-color: #f6a61a;
+  border-color: #f6a61a;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='m6 10 3 3 6-6'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+}
+
+#filtro-oferta:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(246, 166, 26, 0.3);
+}
+
+#filtro-oferta:hover {
+  border-color: #e89611;
+}
+
+#filtro-oferta:checked:hover {
+  background-color: #e89611;
+  border-color: #e89611;
+}

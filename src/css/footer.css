@@ -1,0 +1,223 @@
+/* Padding lateral para centrar el contenido del footer */
+
+/* --- Footer en columnas (nuevo diseño) --- */
+.footer-columns {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    margin-top: 1.5rem;
+}
+
+.footer-col {
+    flex: 1 1 200px;
+    min-width: 180px;
+    margin-left: 6em;
+}
+
+@media (max-width: 991px) {
+
+    .footer-col {
+        margin-left: 3em;
+    }
+}
+
+.footer-title {
+    color: #f6a61a;
+    font-size: 1.1em;
+    font-weight: 600;
+    margin-bottom: 0.7em;
+    letter-spacing: 0.5px;
+}
+
+.footer-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-list li {
+    margin-bottom: 0.5em;
+}
+
+.footer-list a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1em;
+    transition: color 0.2s;
+}
+
+.footer-list a:hover {
+    color: #f6a61a;
+}
+
+.footer-bottom {
+    color: #f6a61a;
+    font-weight: 500;
+    font-size: 1em;
+    padding-top: 1.2em;
+}
+
+@media (max-width: 870px) {
+    .footer-columns {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
+
+    .footer-col {
+        min-width: 0;
+        align-items: center;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .footer-col {
+        margin-left: 0;
+
+    }
+
+    .footer-columns {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-col {
+        text-align: center;
+    }
+}
+
+.footer-bottom {
+    text-align: center;
+}
+
+/* --- Footer: una sola línea por defecto --- */
+.footer-row-top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 0;
+}
+
+.footer-left {
+    flex: 0 1 auto;
+    min-width: 0;
+    white-space: nowrap;
+    text-align: left;
+}
+
+.footer-center {
+    flex: 1 1 auto;
+    min-width: 0;
+    white-space: nowrap;
+    text-align: center;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    display: flex;
+    justify-content: right;
+    gap: 0.5rem;
+}
+
+.footer-right {
+    flex: 0 1 auto;
+    min-width: 0;
+    white-space: nowrap;
+    text-align: right;
+    gap: 1rem;
+    display: flex;
+}
+
+/* --- Footer: dos líneas a partir de 991px hacia abajo --- */
+@media (max-width: 991px) {
+    .footer-row-top {
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+    }
+
+    .footer-left,
+    .footer-center,
+    .footer-right {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+        margin: 0.2rem 0;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .footer-right {
+        order: 1;
+    }
+
+    .footer-center {
+        order: 2;
+        gap: 0.5rem;
+    }
+
+    .footer-left {
+        order: 3;
+    }
+}
+
+
+/* Enlaces y iconos del footer */
+.footer-center a,
+.footer-right a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.footer-center a:hover,
+.footer-right a:hover {
+    color: #f6a61a;
+}
+
+.footer-center a {
+    margin: 0 0.5rem;
+}
+
+.footer-right a {
+    margin-left: 1rem;
+    font-size: 1.15em;
+    font-weight: 500;
+}
+
+.footer-right i {
+    font-size: 1.15em;
+    vertical-align: middle;
+    transition: color 0.2s;
+}
+
+.footer-left span {
+    color: #f6a61a;
+    font-weight: 500;
+    font-size: inherit;
+}
+
+.d-flex.footer-flex {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+/* Estilo para el icono del footer cuando el usuario está logueado */
+#loginButtonFooter .user-logged-icon-footer {
+    color: #f6a61a;
+    font-size: 1.6rem;
+    vertical-align: middle;
+    line-height: 1;
+    display: inline-block;
+    transition: color 0.2s;
+}
+
+/* Efecto hover para el icono del footer cuando el usuario está logueado */
+#loginButtonFooter:hover .user-logged-icon-footer {
+    color: #fff;
+}

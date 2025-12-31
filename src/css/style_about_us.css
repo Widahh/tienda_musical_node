@@ -1,0 +1,187 @@
+/* === Botones CTA igual que en servicios === */
+.background-resaltado {
+    background-color: #f6a61a;
+    color: #000000;
+}
+
+.btn.background-resaltado:hover {
+    background-color: #f6a61a;
+    color: white;
+    transform: none;
+    box-shadow: none;
+}
+
+.txt-resaltado {
+    border: 2px solid #f6a61a;
+}
+
+.btn.txt-resaltado:hover {
+    background-color: transparent;
+    color: #f6a61a;
+    border-color: #f6a61a;
+}
+
+/* Fondo blanco de lado a lado para la sección Dónde estamos */
+.donde-estamos-section {
+    background: #fff;
+    padding: 4em 0;
+}
+
+/* Padding personalizado para la sección CTA especial */
+.cta-aboutus-section {
+    padding-top: 4em;
+}
+
+
+.seccion-sandshotel .mapa-container {
+    box-shadow: 0 2px 16px 0 #23272b22;
+}
+
+/* ================= MAPA GOOGLE MAPS ================= */
+.mapa-container {
+    width: 100%;
+    /* max-width: 500px; */
+    /* margin: 0 auto; */
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 16px 0 #23272b22;
+    background: #fff;
+}
+
+.mapa-iframe {
+    width: 100%;
+    height: 350px;
+    min-height: 250px;
+    min-width: 200px;
+    border: 0;
+    display: block;
+    pointer-events: auto;
+}
+
+.sobre-nosotros {
+    font-size: 3em;
+}
+
+
+/* Palabra resaltada para acento especial en el texto */
+.acento {
+    /* color: #f6a61a; */
+    color: #23272b;
+    font-weight: 600;
+    /* background-color: #23272b; */
+    background-color: #f6a61a;
+    padding: 0 4px;
+    border-radius: 3px;
+}
+
+/* Imágenes de staff: siempre rellena el espacio total de la tarjeta y se alinea por arriba */
+.staff-img-fixed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 0;
+}
+
+/* Imagen recoloreada: oculta por defecto, aparece al hacer hover */
+.staff-img-fade .img-color {
+    opacity: 0;
+    z-index: 2;
+    transition: opacity 0.3s;
+    pointer-events: none;
+}
+
+.staff-img-fade:hover .img-color,
+.staff-img-fade:focus-within .img-color {
+    opacity: 1;
+}
+
+/* Imagen en blanco y negro: siempre visible debajo */
+.staff-img-fade .img-bn {
+    opacity: 1;
+    z-index: 1;
+}
+
+/* Tarjeta principal: posición y recorte */
+.staffCard .card {
+    border: none;
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    min-height: 300px;
+    /* min-width: 260px; */
+    flex: 1 1 260px;
+    max-width: 100%;
+}
+
+/* Bloque amarillo deslizante con nombre y descripción */
+.staffCard-yellow-block {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 40%;
+    max-height: 100%;
+    background: #f6a61a;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 1.2rem;
+    box-sizing: border-box;
+    padding: 0 0.3em 1em 0.3em;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, height 0.3s ease-in-out, max-height 0.3s ease-in-out;
+    /* El movimiento se controla por JS con transform */
+}
+
+/* Estado abierto del bloque amarillo: se adapta al contenido */
+.staffCard-yellow-block.open {
+    height: auto;
+    max-height: 1000px;
+}
+
+/* Nombre del empleado (centrado y adaptativo) */
+.staffCard-yellow-block h5 {
+    margin-top: 0.4em;
+    color: #23272b;
+    font-size: 1.2em;
+    width: 100%;
+    text-align: center;
+    padding: 0;
+    box-sizing: border-box;
+    white-space: normal;
+}
+
+/* Descripción del empleado (centrado) */
+.staffCard-yellow-block .card-desc {
+    color: #23272b;
+    font-size: 1em;
+    width: 100%;
+    text-align: center;
+    /* Sin centrado vertical por defecto */
+}
+
+/* Centrado vertical de la descripción cuando el bloque está abierto */
+.staffCard-yellow-block.open .card-desc {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+/* Cuerpo de la tarjeta: sin padding extra, ocupa todo el alto */
+.staffCard .card-body {
+    position: relative;
+    min-height: 0;
+    padding: 0;
+    height: 100%;
+}
+
+main {
+    padding-bottom: 80px;
+    margin-bottom: 1em;
+    /* Ajusta el valor según la altura de tu footer */
+}

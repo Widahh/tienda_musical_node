@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Contacta con Rat Pack Instruments. Soporte técnico especializado, atención al cliente y asesoramiento en instrumentos musicales. Horario L-V 9:00-20:00, S 10:00-14:00. ¡Te ayudamos!"
+    />
+    <meta name="robots" content="index, follow" />
+    <title>Contacto - Rat Pack Instruments</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/style_chatbot.css" />
+    <link rel="stylesheet" href="../css/services.css" />
+    <!-- Fuente seleccionada para usar en el proyecto-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Asset&display=swap"
+      rel="stylesheet"
+    />
+    <!-- icono tittle -->
+    <link rel="icon" type="image/webp" href="/assets/images/favicon.webp" />
+  </head>
+  <body>
+    <!-- Cabecera de la página -->
+    <header id="header"></header>
+
+    <main class="container py-5 pb-4 mb-4">
+      <div class="row justify-content-center contact-container">
+        <h2 class="text-center mb-4">
+          <i class="bi bi-envelope-fill me-3 icon-bicolor"></i>Tu satisfacción
+          es nuestra prioridad
+        </h2>
+        <div class="col-md-7 col-lg-6 mb-4 mb-md-0">
+          <div class="card border-1 rounded-4 h-100">
+            <div class="card-body p-4">
+              <form id="contactForm" novalidate>
+                <h2 class="text-center mb-4">Contacto</h2>
+                <div class="mb-3">
+                  <label for="nombre" class="form-label">Nombre*</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="nombre"
+                    name="nombre"
+                    required
+                    aria-describedby="nombreError"
+                  />
+                  <div id="nombreError" class="invalid-feedback"></div>
+                </div>
+                <div class="mb-3">
+                  <label for="email" class="form-label"
+                    >Correo electrónico*</label
+                  >
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    name="email"
+                    required
+                    aria-describedby="emailError"
+                  />
+                  <div id="emailError" class="invalid-feedback"></div>
+                </div>
+                <div class="mb-3">
+                  <label for="asunto" class="form-label">Asunto*</label>
+                  <select
+                    class="form-select"
+                    id="asunto"
+                    name="asunto"
+                    required
+                    aria-describedby="asuntoError"
+                  >
+                    <option value="">Selecciona un asunto</option>
+                    <option>Consulta</option>
+                    <option>Sugerencia</option>
+                    <option>Soporte</option>
+                    <option>Otro</option>
+                  </select>
+                  <div id="asuntoError" class="invalid-feedback"></div>
+                </div>
+                <div class="mb-3">
+                  <label for="mensaje" class="form-label">Mensaje*</label>
+                  <textarea
+                    class="form-control"
+                    id="mensaje"
+                    name="mensaje"
+                    rows="4"
+                    required
+                    aria-describedby="mensajeError"
+                  ></textarea>
+                  <div id="mensajeError" class="invalid-feedback"></div>
+                </div>
+                <div class="mb-3">
+                  <label for="telefono" class="form-label">Teléfono</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="telefono"
+                    name="telefono"
+                    aria-describedby="telefonoError"
+                  />
+                  <div id="telefonoError" class="invalid-feedback"></div>
+                </div>
+                <p class="form-text text-center mb-2">* Campos obligatorios</p>
+                <button
+                  type="submit"
+                  class="btn w-100 rounded-pill mt-2 background-resaltado btn-tab"
+                >
+                  <i class="bi bi-envelope-fill me-2"></i>Enviar mensaje
+                </button>
+                <div
+                  id="formSuccess"
+                  class="alert alert-success mt-3 d-none"
+                  aria-live="polite"
+                >
+                  ¡Mensaje enviado correctamente!
+                </div>
+                <div
+                  id="formError"
+                  class="alert alert-danger mt-3 d-none"
+                  aria-live="polite"
+                >
+                  Error al enviar el mensaje. Inténtalo de nuevo.
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div
+          class="col-md-5 col-lg-4 d-flex mt-4 flex-column align-items-center justify-content-between"
+        >
+          <div class="text-center mb-3">
+            <h2 class="mb-3 horario-text">
+              <i class="bi bi-clock me-3 icon-bicolor-vertical"></i>Horario de
+              atención
+            </h2>
+            <ul class="list-unstyled mb-3">
+              <li class="mb-3">Lunes a Viernes: 9:00 - 20:00</li>
+              <li class="mb-3">Sábados: 10:00 - 14:00</li>
+              <li class="mb-3">Domingos y festivos: Cerrado</li>
+            </ul>
+            <img
+              src="/assets/images/logo.webp"
+              alt="Equipo Rat Pack Instruments"
+              class="img-fluid shadow-sm mt-5 mb-3 img-logo"
+              style="max-width: 350px; height: auto; object-fit: contain"
+            />
+          </div>
+          <div class="row g-3 justify-content-center mb-3">
+            <div class="col-4">
+              <img
+                src="/assets/images/support1.webp"
+                alt="María López - Soporte"
+                class="img-fluid rounded-circle shadow-sm mb-2"
+                style="width: 90px; height: 90px; object-fit: cover"
+              />
+              <div class="fw-bold">Aria morales</div>
+              <div class="text-muted" style="font-size: 0.95em">
+                Soporte Técnico
+              </div>
+            </div>
+            <div class="col-4">
+              <img
+                src="/assets/images/support2.webp"
+                alt="Juan Pérez - Atención"
+                class="img-fluid rounded-circle shadow-sm mb-2"
+                style="width: 90px; height: 90px; object-fit: cover"
+              />
+              <div class="fw-bold">Juan Pérez</div>
+              <div class="text-muted" style="font-size: 0.95em">
+                Atención Cliente
+              </div>
+            </div>
+            <div class="col-4">
+              <img
+                src="/assets/images/support3.webp"
+                alt="Lucía Gómez - Postventa"
+                class="img-fluid rounded-circle shadow-sm mb-2"
+                style="width: 90px; height: 90px; object-fit: cover"
+              />
+              <div class="fw-bold">Lucía Gómez</div>
+              <div class="text-muted" style="font-size: 0.95em">Postventa</div>
+            </div>
+          </div>
+          <a
+            href="tel:+34900123456"
+            class="btn rounded-pill w-100 mb-4 txt-resaltado btn-tab"
+          >
+            <i class="bi bi-telephone-fill me-2"></i>Llamar al soporte +34 900
+            123 456
+          </a>
+        </div>
+        <!--
+        <div
+          class="col-md-5 col-lg-5 mb-4 mb-md-0 d-flex flex-column align-items-center justify-content-between"
+        >
+          <div class="card shadow-lg border-0 rounded-4 h-100 w-100">
+            <div class="card-body p-4 d-flex flex-column align-items-center">
+              <div class="text-center mb-3">
+                <h5 class="mb-3 horario-text">
+                  <i class="bi bi-clock me-2"></i>Horario de atención
+                </h5>
+                <ul class="list-unstyled mb-3">
+                  <li class="mb-3">Lunes a Viernes: 9:00 - 20:00</li>
+                  <li class="mb-3">Sábados: 10:00 - 14:00</li>
+                  <li class="mb-3">Domingos y festivos: Cerrado</li>
+                  <img
+                    src="/assets/images/logo.webp"
+                    alt="Equipo Rat Pack Instruments"
+                    class="img-fluid rounded-3 shadow-sm mt-5 mb-3 img-logo"
+                    style="max-width: 350px; height: auto; object-fit: contain"
+                  />
+                </ul>
+              </div>
+              <div class="row g-3 justify-content-center mb-3 w-100">
+                <div class="col-4">
+                  <img
+                    src="/assets/images/support1.webp"
+                    alt="María López - Soporte"
+                    class="img-fluid rounded-circle shadow-sm mb-2"
+                    style="width: 90px; height: 90px; object-fit: cover"
+                  />
+                  <div class="fw-bold">Aria morales</div>
+                  <div class="text-muted" style="font-size: 0.95em">
+                    Soporte Técnico
+                  </div>
+                </div>
+                <div class="col-4">
+                  <img
+                    src="/assets/images/support2.webp"
+                    alt="Juan Pérez - Atención"
+                    class="img-fluid rounded-circle shadow-sm mb-2"
+                    style="width: 90px; height: 90px; object-fit: cover"
+                  />
+                  <div class="fw-bold">Juan Pérez</div>
+                  <div class="text-muted" style="font-size: 0.95em">
+                    Atención Cliente
+                  </div>
+                </div>
+                <div class="col-4">
+                  <img
+                    src="/assets/images/support3.webp"
+                    alt="Lucía Gómez - Postventa"
+                    class="img-fluid rounded-circle shadow-sm mb-2"
+                    style="width: 90px; height: 90px; object-fit: cover"
+                  />
+                  <div class="fw-bold">Lucía Gómez</div>
+                  <div class="text-muted" style="font-size: 0.95em">
+                    Postventa
+                  </div>
+                </div>
+              </div>
+              <a
+                href="tel:+34900123456"
+                class="btn btn-success rounded-pill w-100 mt-auto"
+              >
+                <i class="bi bi-telephone-fill me-2"></i>Llamar al soporte +34
+                900 123 456
+              </a>
+            </div>
+          </div>
+        </div> -->
+      </div>
+    </main>
+
+    <!-- Linea divisoria superior del footer -->
+    <!--     <div class="linea-divisora-fina"></div> -->
+    <!-- Footer -->
+    <div id="footer"></div>
+
+    <!-- Chatbot flotante -->
+    <div id="chatbot-container" class="chatbot-container">
+      <!-- Botón flotante -->
+      <button
+        id="chatbot-toggle"
+        class="chatbot-button"
+        aria-label="Abrir asistente virtual"
+      >
+        <i class="bi bi-chat-dots-fill"></i>
+      </button>
+
+      <!-- Ventana del chatbot -->
+      <div id="chatbot-window" class="chatbot-window d-none">
+        <div class="chatbot-header">
+          <!-- Indicador de redimensionamiento en esquina superior izquierda -->
+          <div
+            class="chatbot-resize-handle"
+            title="Arrastra para redimensionar"
+          >
+            <i class="bi bi-arrows-angle-expand"></i>
+          </div>
+
+          <div class="d-flex align-items-center">
+            <i class="bi bi-robot me-2"></i>
+            <div>
+              <div class="fw-bold">Asistente Virtual</div>
+              <small class="text-muted">Rat Pack Instruments</small>
+            </div>
+          </div>
+          <button
+            id="chatbot-close"
+            class="btn-close"
+            aria-label="Cerrar chat"
+          ></button>
+        </div>
+
+        <div id="chatbot-messages" class="chatbot-messages">
+          <div class="message bot-message">
+            <div class="message-content">
+              ¡Hola! 🎸 Soy tu asistente virtual de Rat Pack Instruments. ¿En
+              qué puedo ayudarte hoy?
+            </div>
+            <div class="message-time">Ahora</div>
+          </div>
+        </div>
+
+        <div class="chatbot-input">
+          <div class="input-group">
+            <input
+              type="text"
+              id="chatbot-input"
+              class="form-control"
+              placeholder="Escribe tu pregunta..."
+              aria-label="Mensaje para el asistente"
+            />
+            <button
+              id="chatbot-send"
+              class="btn btn-primary"
+              type="button"
+              aria-label="Enviar mensaje"
+            >
+              <i class="bi bi-send-fill"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal de búsqueda global -->
+    <div
+      id="globalSearchDropdown"
+      class="search-bar py-1 buscador shadow"
+    >
+      <div class="container">
+        <form
+          class="d-flex justify-content-center buscador-form"
+          role="search"
+          aria-label="Barra de búsqueda global"
+        >
+          <!-- <div
+            class="buscador-input-wrapper position-relative w-100"
+            style="max-width: 400px"
+          >
+            <input
+              class="form-control control-buscador rounded-pill pe-5"
+              type="search"
+              placeholder="Buscar productos..."
+              aria-label="Buscador global"
+              id="global-search-input"
+              autocomplete="off"
+            />
+            <button
+              class="btn btn-link lupa-inside-input position-absolute top-50 end-0 translate-middle-y p-0"
+              type="submit"
+              aria-label="Buscar"
+            >
+              <i class="bi bi-search fs-5"></i>
+            </button>
+          </div> -->
+        </form>
+        <div id="global-search-results" class="mt-2"></div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/auth.js"></script>
+    <script src="../js/app.js"></script>
+    <script src="../js/contact.js"></script>
+    <script src="../js/cart.js"></script>
+    <script src="../js/register.js"></script>
+    <script src="../js/chatbot.js"></script>
+    <script src="../js/header.js"></script>
+  </body>
+</html>

@@ -1,0 +1,398 @@
+/*reset css*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Fuente outfit */
+body {
+  font-family: "Outfit", sans-serif;
+  font-size: 1rem;
+  background-color: rgba(238, 236, 231, 0.693);
+  /*  */
+}
+
+main {
+  margin-bottom: 3em;
+}
+
+.img-emptycart {
+  width: 400px;
+}
+
+#cart-content {
+  display: none;
+}
+
+#cart-count {
+  display: none;
+}
+
+#cart-empty {
+  display: none;
+}
+
+.img-cart-container {
+  max-width: 80px;
+  margin-left: 1rem;
+}
+
+#cart-content,
+#cart-empty {
+  min-height: 300px;
+  /* Alto del spinner */
+}
+
+#columna3 .price {
+  font-size: 1.2em;
+}
+
+
+.product-amount {
+  width: 40px;
+  display: inline-block
+}
+
+.pay-options {
+  pointer-events: none;
+  opacity: 1;
+}
+
+.pay-icon {
+  height: 24px
+}
+
+.pointer-style-pay {
+  pointer-events: none;
+  opacity: 1;
+}
+
+/* Modal personalizado para eliminar producto */
+.custom-delete-modal .btn-close {
+  filter: none;
+  color: #23272b !important;
+  opacity: 1;
+}
+
+.custom-delete-modal .btn-close svg {
+  fill: #23272b !important;
+}
+
+.custom-delete-modal .modal-content {
+  background-color: rgba(238, 236, 231) !important;
+  /* Gris claro */
+  color: #23272b !important;
+  /* Texto naranja */
+  border: #23272b 1px solid !important;
+}
+
+.custom-delete-modal .modal-header,
+.custom-delete-modal .modal-footer {
+  border: none;
+}
+
+.custom-delete-modal .modal-title {
+  color: #23272b !important;
+}
+
+/* .custom-delete-modal .btn-close {
+  filter: invert(70%) sepia(90%) saturate(500%) hue-rotate(10deg) brightness(110%);
+} */
+
+.custom-delete-modal .btn-danger {
+  background-color: #F6A61A !important;
+  color: #23272b !important;
+  border: none;
+}
+
+.custom-delete-modal .btn-danger:hover,
+.custom-delete-modal .btn-danger:focus {
+  background-color: #d48806 !important;
+  color: #fff !important;
+}
+
+
+a.regular-btn,
+.regular-btn {
+  margin-top: 2em;
+  background-color: #23272b;
+  color: #fff;
+  border-color: #23272b;
+  font-weight: 300;
+  border-radius: 999px;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  transition: background 0.2s, color 0.2s, border 0.2s;
+}
+
+a.regular-btn:hover,
+.regular-btn:hover {
+  background-color: #f6a61a;
+  color: #23272b;
+  border-color: #f6a61a;
+}
+
+/* Ajustes para el botón de eliminar producto en pantallas pequeñas */
+@media (max-width: 1199.98px) {
+  .cart-item .delete-product-btn {
+    max-width: 120px;
+    width: 90%;
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+    font-size: 0.95rem;
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 991px) {
+
+  a.regular-btn,
+  .regular-btn {
+    margin-top: 2em;
+  }
+}
+
+
+.clear-btn {
+  background-color: transparent !important;
+  color: black !important;
+  border: black 1px solid !important;
+}
+
+.clear-btn:hover,
+.clear-btn:focus {
+  background-color: transparent !important;
+  color: #F6A61A !important;
+}
+
+.btn-decrease,
+.btn-increase {
+  color: #F6A61A !important;
+  background-color: #110d0c !important;
+  border-color: #110d0c !important;
+}
+
+.btn-decrease:hover,
+.btn-increase:hover {
+  color: white !important;
+  background-color: #110d0c !important;
+  border-color: #110d0c !important;
+}
+
+.cart-qty-group {
+  max-width: 100px;
+  /* o el ancho que prefieras */
+  width: 100%;
+  margin: 0 auto;
+  /* margin-bottom: 1rem; */
+}
+
+.cart-qty-input {
+  min-width: 0;
+  width: 40px !important;
+  flex: 0 0 40px;
+  padding: 0 4px;
+}
+
+
+/*Botón para ir a página de autenticación */
+.auth-button {
+  background-color: #F6A61A !important;
+  color: black !important;
+  border: none;
+}
+
+/* Botón para ir a modal de login */
+/* Cambia el color del borde y texto en estado normal */
+.btn-outline-primary {
+  color: black !important;
+  /* color del texto */
+  border-color: black !important;
+  /* color del borde */
+}
+
+/* Cambia el color de fondo, borde y texto en hover/focus */
+.btn-outline-primary:hover,
+.btn-outline-primary:focus {
+  color: #23272b !important;
+  /* color del texto en hover */
+  background-color: #f6a61a !important;
+  /* color de fondo en hover */
+  border-color: #f6a61a !important;
+  /* color del borde en hover */
+}
+
+.auth-button:hover,
+.auth-button:focus {
+  background-color: black !important;
+  color: #f6a61a !important;
+  text-decoration: none !important;
+}
+
+/* Botón cerrar de los modales */
+.delete-product-btn {
+  background-color: #D93444 !important;
+  color: white !important;
+  border: none;
+  opacity: 1;
+  font-weight: 600 !important;
+}
+
+.delete-product-btn:hover,
+.delete-product-btn:focus {
+  background-color: #f6a61a !important;
+  color: black !important;
+  opacity: 0.9;
+  font-weight: 600 !important;
+}
+
+.cancel-button,
+.close-button {
+  background-color: #6C757D !important;
+  color: black !important;
+  border: none;
+}
+
+.close-button:hover,
+.close-button:focus,
+.cancel-button:hover,
+.cancel-button:focus {
+  background-color: black !important;
+  color: #f6a61a !important;
+  opacity: 0.9;
+}
+
+.text-success-accessible {
+  color: #145317 !important;
+}
+
+.link-accessible {
+  color: #084298 !important;
+  text-decoration: underline;
+}
+
+@media (max-width: 770px) {
+
+  .img-cart-container {
+    max-width: none !important;
+    width: auto !important;
+  }
+
+  .img-cart-container img {
+    max-width: 100px !important;
+    width: 100px !important;
+    height: auto !important;
+    margin: 0 !important;
+    display: block;
+    transform: translateX(-3em) !important;
+  }
+
+  .cart-item {
+    padding: 2em 0;
+    /* display: flex;
+    justify-content: center; */
+  }
+
+  .row.g-0.align-items-center.flex-row {
+    display: flex !important;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .img-cart-container {
+    /* margin-left: 0 !important; */
+    width: auto !important;
+    display: block !important;
+    justify-content: unset !important;
+  }
+
+  /* Regla eliminada para evitar sobrescribir el margen y el ancho de la imagen del carrito */
+
+  /* Fila para precio y cantidad, centrados horizontalmente */
+  .cart-row-precio-cantidad {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    margin-bottom: 0.5em;
+  }
+
+  .cart-row-precio-cantidad .price {
+    font-weight: 600;
+    /* margin-right: 8em; */
+    /* transform: translateX(-2em); */
+  }
+
+  .cart-row-precio-cantidad .cart-qty-group {
+    margin-left: 0.5em;
+  }
+
+
+  #columna1,
+  #columna2 {
+    width: 50% !important;
+    display: flex !important;
+    align-items: center !important;
+    min-height: 48px;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  #columna1 {
+    justify-content: flex-end !important;
+    text-align: right !important;
+  }
+
+  #columna2 {
+    justify-content: flex-start !important;
+    text-align: left !important;
+    transform: translateX(-2em);
+  }
+
+  #columna3,
+  #columna4 {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    margin-bottom: 1em;
+    padding: 0;
+    min-height: 48px;
+  }
+
+  #columna3 {
+    justify-content: flex-end;
+    text-align: right;
+    padding-right: 2em;
+  }
+
+  #columna4 {
+    justify-content: flex-start;
+    text-align: left;
+  }
+
+  /* Botón eliminar debajo, centrado y con margen */
+  .delete-product-btn {
+    display: block;
+    margin: 1em auto 0 auto;
+  }
+
+  /* Margen inferior al botón de eliminar producto */
+  .delete-product-btn {
+    margin-bottom: 1em;
+  }
+
+  /* Desplazamiento del precio en móvil */
+  #columna3 .price {
+    transform: translateX(-1em);
+    font-size: 1.5em;
+  }
+
+  /* Forzar desplazamiento visual de la imagen del carrito en móvil */
+  #columna1 .img-cart-container img {
+    transform: translateX(-2em) !important;
+  }
+}

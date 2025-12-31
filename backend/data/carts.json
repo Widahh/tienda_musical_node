@@ -1,0 +1,137 @@
+[
+  {
+    "user": "guest",
+    "items": [
+      {
+        "id": 1,
+        "name": "Guitarra Acústica",
+        "price": 180,
+        "offerPrice": 150,
+        "image": "../assets/images/guitar7.png",
+        "description": "Guitarra acústica de alta calidad.",
+        "category": "acoustic-guitars",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "user": {},
+    "items": [
+      {
+        "id": 1,
+        "name": "Guitarra Acústica",
+        "price": 180,
+        "offerPrice": 150,
+        "image": "../assets/images/guitar7.png",
+        "description": "Guitarra acústica de alta calidad.",
+        "category": "acoustic-guitars",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "user": {},
+    "items": [
+      {
+        "id": 2,
+        "name": "Guitarra Eléctrica",
+        "price": 350,
+        "offerPrice": 300,
+        "image": "../assets/images/guitar3.png",
+        "description": "Guitarra eléctrica para músicos avanzados.",
+        "category": "electric-guitars",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "user": {},
+    "items": [
+      {
+        "id": 2,
+        "name": "Guitarra Eléctrica",
+        "price": 350,
+        "offerPrice": 300,
+        "image": "../assets/images/guitar3.png",
+        "description": "Guitarra eléctrica para músicos avanzados.",
+        "category": "electric-guitars",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "user": "admin@gmail.com",
+    "items": []
+  },
+  {
+    "user": "lore@email.com",
+    "items": [
+      {
+        "id": 21,
+        "name": "Teclado Digital ProKeys 88",
+        "price": 1200,
+        "offerPrice": 999,
+        "image": "../assets/images/key1.webp",
+        "description": "Teclado digital de 88 teclas con acción contrapesada y sonidos premium. Ideal para escenario y estudio.",
+        "category": "keyboards",
+        "quantity": 1
+      },
+      {
+        "id": 4,
+        "name": "Guitarra Flamenca",
+        "price": 200,
+        "offerPrice": 200,
+        "image": "../assets/images/guitar12.webp",
+        "description": "Guitarra flamenca con un diseño tradicional.",
+        "category": "classical-guitars",
+        "quantity": 2
+      }
+    ]
+  },
+  {
+    "user": "VicentePrueba2@gmail.com",
+    "items": []
+  },
+  {
+    "user": "luna@email.com",
+    "items": [
+      {
+        "id": 2,
+        "name": "Guitarra Eléctrica",
+        "price": 350,
+        "offerPrice": 300,
+        "image": "../assets/images/guitar3.webp",
+        "description": "Guitarra eléctrica para músicos avanzados.",
+        "category": "electric-guitars",
+        "familia": "cuerda",
+        "quantity": 3
+      },
+      {
+        "id": 17,
+        "name": "Set de Platillos",
+        "price": 400,
+        "offerPrice": 400,
+        "image": "../assets/images/drum3.webp",
+        "description": "Set de platillos de alta calidad para bateristas profesionales.",
+        "category": "platillos",
+        "familia": "percusion",
+        "quantity": 1
+      },
+      {
+        "id": 16,
+        "name": "Batería Electrónica",
+        "price": 600,
+        "offerPrice": 600,
+        "image": "../assets/images/drum5.webp",
+        "description": "Batería electrónica compacta y versátil.",
+        "category": "batería",
+        "familia": "percusion",
+        "quantity": 1
+      }
+    ]
+  },
+  {
+    "user": "lalelulelo@ocelot.es",
+    "items": []
+  }
+]
